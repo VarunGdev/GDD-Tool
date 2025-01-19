@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Document Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <div id="debug-message" class="message"></div>
+    <div class="container">
+        <h1>Game Design Document Generator</h1>
+        <form id="game-form">
+            <label for="title"> Game Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="genre">Genre:</label>
+            <select id="genre" name="genre" required>
+                <option value="" disabled selected>Select a genre</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="RPG">RPG</option>
+                <option value="Simulation">Simulation</option>
+                <option value="Strategy">Strategy</option>
+                <option value="Sports">Sports</option>
+                <option value="Puzzle">Puzzle</option>
+                <option value="Horror">Horror</option>
+                <option value="Shooter">Shooter</option>
+            </select>
+
+            <label for="upload-images">Upload Images (multiple allowed):</label>
+            <input type="file" id="upload-images" name="upload-images" accept="image/*" multiple>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="aesthetic">Aesthetic:</label>
+            <textarea id="aesthetic" name="aesthetic"></textarea>
+
+            <label for="core-concept">Core Concept:</label>
+            <textarea id="core-concept" name="core-concept"></textarea>
+
+            <label for="features">Features:</label>
+            <textarea id="features" name="features"></textarea>
+
+            <label for="gameplay-loop">Gameplay Loop:</label>
+            <textarea id="gameplay-loop" name="gameplay-loop"></textarea>
+
+            <button type="button" id="generate-pdf">Generate PDF</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
